@@ -9,7 +9,7 @@ test("Checkboxes & Radio Buttons", async ({ page }) => {
   await page.waitForTimeout(2000);
 
   //Unchecking a Checkbox
-  await page.uncheck("div.checkbox-group input[value='Option 1']");
+  await page.uncheck("");
   //Selecting a Radio Button
   await page.getByRole("radio", { name: "Choice A" }).check();
   await page.waitForTimeout(2000);
