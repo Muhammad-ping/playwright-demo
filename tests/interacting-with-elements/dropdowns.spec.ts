@@ -25,3 +25,13 @@ test("Dropdowns", async ({ page }) => {
   // Wait for 2 seconds to observe the change
   await page.waitForTimeout(2000);
 });
+
+test("Dropdowns2", async ({ page }) => {
+  await page.goto("https://selectors-practice.onrender.com/");
+
+  await page.locator("#dropdownDisplay").scrollIntoViewIfNeeded();
+
+  await page.locator("#dropdownDisplay").click();
+  await page.locator("#customDropdownSearch").fill("Madrid");
+  await page.locator("//ul[@id='dropdownOptions']").click();
+});
